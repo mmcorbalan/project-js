@@ -10,7 +10,6 @@ body {
   background-color: black;
   color: white;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  /* font-family: Arial, sans-serif; */
 }
 
 nav {
@@ -26,7 +25,7 @@ nav {
   height: 750px;
   background-size: cover;
   background-position: center;
-  z-index: 2;
+  z-index: 1;
 }
 
 .nav-header {
@@ -128,7 +127,7 @@ hr {
   color: black;
   height: 10px;
   margin: -2px auto;
-  z-index: 1;
+  z-index: 0;
 }
 
 section {
@@ -136,14 +135,10 @@ section {
   justify-content: center;
   align-items: center;
   margin: 50px 0 50px 0;
-  /* flex-wrap: wrap; */
-  /* padding: -100px 0px; */
 }
 
 section .content {
   width: 32%;
-  position: relative;
-  z-index: 0;
 }
 
 section .content h3 {
@@ -237,6 +232,11 @@ section img {
     width: 90%;
     margin: auto;
     padding: 50px 0;
+    flex-wrap: wrap;
+  }
+
+  section .content {
+    width: 100%;
   }
 
   section .content h3 {
@@ -246,6 +246,7 @@ section img {
   }
 
   section .content p {
+    width: 100%;
     font-size: 18px;
     text-align: center;
     position: relative;
