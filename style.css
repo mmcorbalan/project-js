@@ -46,7 +46,7 @@ nav {
   border-radius: 3px;
 }
 
-.drop-down {
+.dropdown {
   color: white;
   display: flex;
   justify-content: center;
@@ -55,8 +55,7 @@ nav {
   height: 35px;
   border: 1px solid;
   border-radius: 2px;
-  margin-left: auto;
-  margin-right: 30px;
+  margin: 0 30px 0 auto;
 }
 
 select {
@@ -77,13 +76,13 @@ option {
   text-align: center;
   word-wrap: normal;
   flex-direction: column;
-  margin-top: 150px;
+  margin: 150px 20px;
 }
 
 .nav-content h2 {
   max-width: 700px;
   font-size: 60px;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .nav-content p {
@@ -102,7 +101,7 @@ form {
   height: 70px;
 }
 
-.inputEmail {
+.input-email {
   background-color: white;
   width: 60%;
   height: 100%;
@@ -111,7 +110,7 @@ form {
   border-radius: 2px 0 0 2px;
 }
 
-.inputSubmit {
+.input-submit {
   background-color: #e50914;
   color: white;
   width: 220px;
@@ -131,18 +130,20 @@ hr {
 }
 
 section {
+  padding: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 section .content {
-  width: 30%;
+  max-width: 600px;
 }
 
 section .content h3 {
   font-size: 50px;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 section .content p {
@@ -157,16 +158,16 @@ section img {
   width: 100%;
 }
 
-.tvSection {
+.section-tv {
   margin: 30px auto 50px auto;
 }
 
-.mobileSection {
+.section-mobile {
   flex-wrap: wrap-reverse;
   margin: 20px auto 45px auto;
 }
 
-.deviceSection {
+.section-device {
   margin: 30px auto 80px auto;
 }
 
@@ -176,7 +177,7 @@ section img {
         to top,
         rgba(0, 0, 0, 0.8) 0,
         rgba(0, 0, 0, 0.4) 60%,
-        rgba(0, 0, 0, 20) 100%
+        rgba(0, 0, 0, 1) 100%
       ),
       url('./img/navBackground.jpg');
     height: 530px;
@@ -196,7 +197,7 @@ section img {
     border-radius: 3px;
   }
 
-  .drop-down {
+  .dropdown {
     height: 28px;
     margin: auto;
   }
@@ -223,7 +224,7 @@ section img {
     width: 90%;
   }
 
-  .inputEmail {
+  .input-email {
     width: 100%;
     height: 50px;
     padding: 0 10px;
@@ -231,7 +232,7 @@ section img {
     border-radius: 2px;
   }
 
-  .inputSubmit {
+  .input-submit {
     width: 120px;
     height: 40px;
     font-size: 16px;
@@ -252,7 +253,7 @@ section img {
 
   section .content h3 {
     font-size: 25px;
-    font-weight: 650;
+    font-weight: bold;
     text-align: center;
   }
 
@@ -265,23 +266,117 @@ section img {
   }
 
   section .image {
+    margin: -30px 0 0 0;
+    position: relative;
+    z-index: 0;
+  }
+
+  .section-tv,
+  .section-mobile,
+  .section-device {
+    margin: auto;
+  }
+
+  .section-device p {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+  nav {
+    height: 820px;
+  }
+
+  .nav-header {
+    padding: 25px 45px;
+    margin-bottom: -20px;
+  }
+
+  .nav-header img {
+    width: 110px;
+  }
+
+  .nav-content h2 {
+    font-size: 48px;
+    max-width: 700px;
+    margin-bottom: 10px;
+  }
+
+  .nav-content p {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .nav-content h5 {
+    font-size: 18px;
+    max-width: 400px;
+    margin-bottom: 10px;
+  }
+
+  form {
+    max-width: 500px;
+  }
+
+  .input-email {
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+    font-size: 15px;
+    border-radius: 2px;
+  }
+
+  .input-submit {
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 15px;
+    border-radius: 2px;
+  }
+
+  section {
+    width: 90%;
+    margin: auto;
+    padding: 50px 0;
+    flex-wrap: wrap;
+  }
+
+  section .content h3 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  section .content p {
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  section .image {
     position: relative;
     margin: -30px 0 0 0;
     z-index: 0;
   }
 
-  .tvSection {
-    margin: auto auto;
+  .section-tv,
+  .section-mobile,
+  .section-device {
+    margin: auto;
   }
 
-  .mobileSection {
-    margin: auto auto;
-  }
-
-  .deviceSection {
-    margin: auto auto;
-  }
-  .deviceSection p {
+  .section-device p {
     margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1201px) {
+  section .content {
+    max-width: 100%;
+  }
+
+  section .content h3,
+  section .content p {
+    text-align: center;
   }
 }
